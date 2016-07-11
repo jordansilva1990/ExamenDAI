@@ -1,15 +1,15 @@
 <?php
 require_once("../datos/Conexion.php");
 
-class Categoria {
+class Comuna {
     private $id_com;
-    private $nombre;
+    private $nombre_com;
 
     public function __contruct() {}
 
-    public function Categoria($id_com, $nombre) {
+    public function Comuna($id_com, $nombre_com) {
         $this->id_com=$id_com;
-        $this->nombre=$nombre;
+        $this->nombre_com=$nombre_com;
     }
 	
 
@@ -19,7 +19,7 @@ class Categoria {
     }
 
     public function getNombre() {
-        return $this->nombre;
+        return $this->nombre_com;
     }
 
     //SETTERS
@@ -27,15 +27,15 @@ class Categoria {
         $this->id_cat=$id_cat;
     }
 
-    public function setNombre($nombre) {
-        $this->nombre=$nombre;
+    public function setNombre_com($nombre_com) {
+        $this->nombre_com=$nombre_com;
     }
 
     //CRUD
 	public function insertarCategoria() {  
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="INSERT INTO COMUNA VALUES('".$this->id_com."','".$this->nombre."')";
+	    $sql="INSERT INTO COMUNA VALUES('".$this->id_com."','".$this->nombre_com."')";
 	    $resul=$objConex->ejecutarTransaccion($sql);	
 	    return $resul;
 	}
@@ -43,7 +43,7 @@ class Categoria {
 	public function modificarCategoria() {  
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="UPDATE COMUNA SET ID_COM='".$this->id_com."',NOMBRE='".$this->nombre."' WHERE(ID_COM='".$this->id_com."')";  
+	    $sql="UPDATE COMUNA SET ID_COM='".$this->id_com."',NOMBRE_COM='".$this->nombre_com."' WHERE(ID_COM='".$this->id_com."')";  
 	    $resul=$objConex->ejecutarTransaccion($sql);	
 	    return $resul;
 	}
