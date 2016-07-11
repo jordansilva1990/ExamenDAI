@@ -1,5 +1,5 @@
 <?php
-require_once("../datos/Conexion.php");
+require_once("../datos/conexion.php");
 
 class Comuna {
     private $id_com;
@@ -24,7 +24,7 @@ class Comuna {
 
     //SETTERS
     public function setId_com($id_com) {
-        $this->id_cat=$id_cat;
+        $this->id_com=$id_com;
     }
 
     public function setNombre_com($nombre_com) {
@@ -73,3 +73,4 @@ class Comuna {
 	    return $matrix;
 	}
 }
+?>

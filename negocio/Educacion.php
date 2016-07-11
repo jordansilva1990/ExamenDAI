@@ -1,5 +1,5 @@
 <?php
-require_once("../datos/Conexion.php");
+require_once("../datos/conexion.php");
 
 class Educacion {
     private $id_edu;
@@ -73,3 +73,4 @@ class Educacion {
 	    return $matrix;
 	}
 }
+?>
