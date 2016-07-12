@@ -11,7 +11,7 @@ class Comuna {
         $this->id_com=$id_com;
         $this->nombre_com=$nombre_com;
     }
-	
+
 
     //GETTERS
     public function getId_com() {
@@ -32,44 +32,44 @@ class Comuna {
     }
 
     //CRUD
-	public function insertarCategoria() {  
+	public function insertarComuna() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
 	    $sql="INSERT INTO COMUNA VALUES('".$this->id_com."','".$this->nombre_com."')";
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
-	public function modificarCategoria() {  
+	public function modificarComuna() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="UPDATE COMUNA SET ID_COM='".$this->id_com."',NOMBRE_COM='".$this->nombre_com."' WHERE(ID_COM='".$this->id_com."')";  
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $sql="UPDATE COMUNA SET ID_COM='".$this->id_com."',NOMBRE_COM='".$this->nombre_com."' WHERE(ID_COM='".$this->id_com."')";
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
-	public function eliminarComuna($id_com) {  
+	public function eliminarComuna($id_com) {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="DELETE FROM COMUNA WHERE(ID_COM='".$id_com."')";	  
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $sql="DELETE FROM COMUNA WHERE(ID_COM='".$id_com."')";
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
 	//QUERY
-	public function buscarComuna($id_com) {  
+	public function buscarComuna($id_com) {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="SELECT * FROM COMUNA WHERE(ID_COM='".$id_com."')";	  
-	    $vector=$objConex->ejecutarTransaccion($sql);	
+	    $sql="SELECT * FROM COMUNA WHERE(ID_COM='".$id_com."')";
+	    $vector=$objConex->ejecutarTransaccion($sql);
 	    return $vector;
 	}
 
-	public function listarCategoria() {  
+	public function listarComuna() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="SELECT * FROM COMUNA";	  
-	    $matrix=$objConex->ejecutarTransaccion($sql);	
+	    $sql="SELECT * FROM COMUNA";
+	    $matrix=$objConex->ejecutarTransaccion($sql);
 	    return $matrix;
 	}
 }

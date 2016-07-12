@@ -11,7 +11,7 @@ class Estado_Civil {
         $this->id_estado=$id_estado;
         $this->nombre_estado=$nombre_estado;
     }
-	
+
 
     //GETTERS
     public function getId_estado() {
@@ -32,44 +32,44 @@ class Estado_Civil {
     }
 
     //CRUD
-	public function insertarCategoria() {  
+	public function insertarEstado() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
 	    $sql="INSERT INTO ESTADO VALUES('".$this->id_estado."','".$this->nombre_estado."')";
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
-	public function modificarEducacion() {  
+	public function modificarEstado() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="UPDATE ESTADO SET ID_ESTADO='".$this->id_estado."',NOMBRE_ESTADO='".$this->nombre_estado."' WHERE(ID_ESTADO='".$this->id_estado."')";  
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $sql="UPDATE ESTADO SET ID_ESTADO='".$this->id_estado."',NOMBRE_ESTADO='".$this->nombre_estado."' WHERE(ID_ESTADO='".$this->id_estado."')";
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
-	public function eliminarEducacion($id_estado) {  
+	public function eliminarEstado($id_estado) {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="DELETE FROM ESTADO WHERE(ID_ESTADO='".$id_estado."')";	  
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $sql="DELETE FROM ESTADO WHERE(ID_ESTADO='".$id_estado."')";
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
 	//QUERY
-	public function buscarEstado($id_estado) {  
+	public function buscarEstado($id_estado) {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="SELECT * FROM ESTADO WHERE(ID_EDU='".$id_estado."')";	  
-	    $vector=$objConex->ejecutarTransaccion($sql);	
+	    $sql="SELECT * FROM ESTADO WHERE(ID_EDU='".$id_estado."')";
+	    $vector=$objConex->ejecutarTransaccion($sql);
 	    return $vector;
 	}
 
-	public function listarCategoria() {  
+	public function listarEstado() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="SELECT * FROM ESTADO";	  
-	    $matrix=$objConex->ejecutarTransaccion($sql);	
+	    $sql="SELECT * FROM ESTADO";
+	    $matrix=$objConex->ejecutarTransaccion($sql);
 	    return $matrix;
 	}
 }

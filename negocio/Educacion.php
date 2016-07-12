@@ -11,7 +11,7 @@ class Educacion {
         $this->id_edu=$id_edu;
         $this->nombre_edu=$nombre_edu;
     }
-	
+
 
     //GETTERS
     public function getId_edu() {
@@ -32,44 +32,44 @@ class Educacion {
     }
 
     //CRUD
-	public function insertarCategoria() {  
+	public function insertarEducacion() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
 	    $sql="INSERT INTO EDUCACION VALUES('".$this->id_edu."','".$this->nombre_edu."')";
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
-	public function modificarEducacion() {  
+	public function modificarEducacion() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="UPDATE EDUCACION SET ID_EDU='".$this->id_edu."',NOMBRE_EDU='".$this->nombre_edu."' WHERE(ID_EDU='".$this->id_edu."')";  
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $sql="UPDATE EDUCACION SET ID_EDU='".$this->id_edu."',NOMBRE_EDU='".$this->nombre_edu."' WHERE(ID_EDU='".$this->id_edu."')";
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
-	public function eliminarEducacion($id_edu) {  
+	public function eliminarEducacion($id_edu) {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="DELETE FROM EDUCACION WHERE(ID_EDU='".$id_edu."')";	  
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $sql="DELETE FROM EDUCACION WHERE(ID_EDU='".$id_edu."')";
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
 	//QUERY
-	public function buscarEducacion($id_edu) {  
+	public function buscarEducacion($id_edu) {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="SELECT * FROM EDUCACION WHERE(ID_EDU='".$id_edu."')";	  
-	    $vector=$objConex->ejecutarTransaccion($sql);	
+	    $sql="SELECT * FROM EDUCACION WHERE(ID_EDU='".$id_edu."')";
+	    $vector=$objConex->ejecutarTransaccion($sql);
 	    return $vector;
 	}
 
-	public function listarCategoria() {  
+	public function listarEducacion() {  
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="SELECT * FROM EDUCACION";	  
-	    $matrix=$objConex->ejecutarTransaccion($sql);	
+	    $sql="SELECT * FROM EDUCACION";
+	    $matrix=$objConex->ejecutarTransaccion($sql);
 	    return $matrix;
 	}
 }

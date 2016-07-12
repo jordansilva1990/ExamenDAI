@@ -11,7 +11,7 @@ class Renta {
         $this->id_renta=$id_renta;
         $this->nombre_renta=$nombre_renta;
     }
-	
+
 
     //GETTERS
     public function getId_renta() {
@@ -32,44 +32,44 @@ class Renta {
     }
 
     //CRUD
-	public function insertarRenta() {  
+	public function insertarRenta() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
 	    $sql="INSERT INTO RENTA VALUES('".$this->id_renta."','".$this->nombre_renta."')";
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
-	public function modificarRenta() {  
+	public function modificarRenta() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="UPDATE RENTA SET ID_RENTA='".$this->id_renta."',NOMBRE_RENTA='".$this->nombre_renta."' WHERE(ID_RENTA='".$this->id_renta."')";  
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $sql="UPDATE RENTA SET ID_RENTA='".$this->id_renta."',NOMBRE_RENTA='".$this->nombre_renta."' WHERE(ID_RENTA='".$this->id_renta."')";
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
-	public function eliminarRenta() {  
+	public function eliminarRenta() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="DELETE FROM RENTA WHERE(ID_RENTA='".$id_renta."')";	  
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $sql="DELETE FROM RENTA WHERE(ID_RENTA='".$id_renta."')";
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
 	//QUERY
-	public function buscarComuna() {  
+	public function buscarRenta() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="SELECT * FROM RENTA WHERE(ID_RENTA='".$id_renta."')";	  
-	    $vector=$objConex->ejecutarTransaccion($sql);	
+	    $sql="SELECT * FROM RENTA WHERE(ID_RENTA='".$id_renta."')";
+	    $vector=$objConex->ejecutarTransaccion($sql);
 	    return $vector;
 	}
 
 	public function listarRenta() {  
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="SELECT * FROM RENTA";	  
-	    $matrix=$objConex->ejecutarTransaccion($sql);	
+	    $sql="SELECT * FROM RENTA";
+	    $matrix=$objConex->ejecutarTransaccion($sql);
 	    return $matrix;
 	}
 }

@@ -15,7 +15,7 @@ class Solicitud {
         $this->fecha=$fecha;
         $this->rut_post=$rut_post;
     }
-	
+
 
     //GETTERS
     public function getId_solicitud() {
@@ -25,11 +25,11 @@ class Solicitud {
     public function getEstado() {
         return $this->estado;
     }
-    
+
     public function getfecha() {
         return $this->fecha;
     }
-    
+
     public function getRut_post() {
         return $this->rut_post;
     }
@@ -42,54 +42,54 @@ class Solicitud {
     public function setEstado($estado) {
         $this->estado=$estado;
     }
-    
+
     public function setFecha($fecha) {
         $this->fecha=$fecha;
     }
-    
+
     public function setRut_post($rut_post) {
         $this->rut_post=$rut_post;
     }
 
     //CRUD
-	public function insertarSolicitud() {  
+	public function insertarSolicitud() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
 	    $sql="INSERT INTO SOLICITUD VALUES(".$this->id_solicitud.",'".$this->estado."', '".$this->fecha."', '".$this->rut_post."')";
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
-	public function modificarSolicitud() {  
+	public function modificarSolicitud() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="UPDATE SOLICITUD SET ID_SOLICITUD=".$this->id_solicitud.",ESTADO='".$this->estado."', FECHA='".$this->fecha."', RUT_POST='".$this->rut_post."' WHERE(ID_SOLICITUD='".$this->id_solicitud."')";  
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $sql="UPDATE SOLICITUD SET ID_SOLICITUD=".$this->id_solicitud.",ESTADO='".$this->estado."', FECHA='".$this->fecha."', RUT_POST='".$this->rut_post."' WHERE(ID_SOLICITUD='".$this->id_solicitud."')";
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
-	public function eliminarSolicitud() {  
+	public function eliminarSolicitud() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="DELETE FROM SOLICITUD WHERE(ID_SOLICITUD='".$id_solicitud."')";	  
-	    $resul=$objConex->ejecutarTransaccion($sql);	
+	    $sql="DELETE FROM SOLICITUD WHERE(ID_SOLICITUD='".$id_solicitud."')";
+	    $resul=$objConex->ejecutarTransaccion($sql);
 	    return $resul;
 	}
 
 	//QUERY
-	public function buscarSolicitud() {  
+	public function buscarSolicitud() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="SELECT * FROM SOLICITUD WHERE(ID_SOLICITUD='".$id_solicitud."')";	  
-	    $vector=$objConex->ejecutarTransaccion($sql);	
+	    $sql="SELECT * FROM SOLICITUD WHERE(ID_SOLICITUD='".$id_solicitud."')";
+	    $vector=$objConex->ejecutarTransaccion($sql);
 	    return $vector;
 	}
 
-	public function listarSolicitud() {  
+	public function listarSolicitud() {
         $objConex= new Conexion();
 	    $objConex->abrirConexion();
-	    $sql="SELECT * FROM SOLICITUD";	  
-	    $matrix=$objConex->ejecutarTransaccion($sql);	
+	    $sql="SELECT * FROM SOLICITUD";
+	    $matrix=$objConex->ejecutarTransaccion($sql);
 	    return $matrix;
 	}
 }
