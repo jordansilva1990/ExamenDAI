@@ -56,6 +56,9 @@
                         <li class="active">
                             <a href="Registro.php"><i class="fa fa-fw fa-dashboard" aria-hidden="true"></i>&nbsp;Registro</a>
                         </li>
+                        <li class="active">
+                            <a href="Registro.php"><i class="fa fa-fw fa-dashboard" aria-hidden="true"></i>&nbsp;Mostrar Solicitudes</a>
+                        </li>
                     </ul>
                 </div>               
             </nav>

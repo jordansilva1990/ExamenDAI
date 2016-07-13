@@ -21,11 +21,11 @@
                         <tbody>
                             <tr>
                                 <td>Rut</td>
-                                <td><input type=text class="form-control" name=rut_pos></td></td                          
+                                <td><input type=text class="form-control" name=rut_usu></td></td                          
                             </tr>
                             <tr>
                                 <td>Nombre</td>
-                                <td><input type=text class="form-control" name=nombre></td></td>                                
+                                <td><input type=text class="form-control" name=nombre_usu></td></td>                                
                             </tr>
                             <tr>
                                 <td>Apellido Paterno</td>
@@ -37,11 +37,11 @@
                             </tr>
                             <tr>
                                 <td>Contraseña</td>
-                                <td><input type=text class="form-control" name=pass></td></td>                                
+                                <td><input type="password" class="form-control" name=pass></td></td>                                
                             </tr>
                             <tr>
                                 <td>Repetir Contraseña</td>
-                                <td><input type=text class="form-control" name=pass2></td></td>                                
+                                <td><input type="password" class="form-control" name=pass2></td></td>                                
                             </tr>
                             <tr>
                                 <td></td>

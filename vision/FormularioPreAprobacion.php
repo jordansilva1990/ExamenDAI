@@ -82,12 +82,12 @@
                                 </select>
                                 </td>                                
                                 <td>Sueldo Liquido</td>
-                                <td><input type=text class="form-control" name=rut_pos></td></td>
+                                <td><input type=text class="form-control" name=sueldo></td></td>
                             </tr>
                             <tr>
                                 <td>Hijos</td>
                                 <td><input type=text class="form-control" name=hijos></td></td>                                <td>Enfermedad</td>
-                                <td><input type=text class="form-control" name=rut_pos></td></td>
+                                <td><input type=text class="form-control" name=enfermedad></td></td>
                             </tr>
                             <tr>
                                 <td></td>
