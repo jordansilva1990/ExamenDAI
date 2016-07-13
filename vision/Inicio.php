@@ -53,6 +53,9 @@
                         <li class="active">
                             <a href="ListarSolicitudes.php"><i class="fa fa-fw fa-dashboard" aria-hidden="true"></i>&nbsp;Listar Solicitudes</a>
                         </li>
+                        <li class="active">
+                            <a href="Registro.php"><i class="fa fa-fw fa-dashboard" aria-hidden="true"></i>&nbsp;Registro</a>
+                        </li>
                     </ul>
                 </div>               
             </nav>
