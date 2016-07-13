@@ -2,14 +2,14 @@
 require_once("../negocio/Usuario.php");
 if(isset($_POST["rut_usu"]) && $_POST["rut_usu"]!="")
 { $rut_usu=$_POST["rut_usu"];}
-if(isset($_POST["nombre_usu"]) && $_POST["nombre_usu"]!="")
-{ $nombre_usu=$_POST["nombre_usu"];}
+if(isset($_POST["usuario"]) && $_POST["usuario"]!="")
+{ $nombre_usu=$_POST["usuario"];}
 if(isset($_POST["apel_pat"]) && $_POST["apel_pat"]!="")
 { $apel_pat=$_POST["apel_pat"];}
 if(isset($_POST["apel_mat"]) && $_POST["apel_mat"]!="")
 { $apel_mat=$_POST["apel_mat"];}
-if(isset($_POST["pass"]) && $_POST["pass"]!="")
-{ $pass=$_POST["pass"];}
+if(isset($_POST["clave"]) && $_POST["clave"]!="")
+{ $pass=$_POST["clave"];}
 
 if(isset($_POST["OK"]) && $_POST["OK"]=="Insertar")
 { //Trigger insercion

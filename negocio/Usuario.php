@@ -8,7 +8,7 @@ class Usuario {
     private $apel_mat;
     private $pass;
 
-    public function __contruct() {}
+    public function __construct() {}
 
     public function Usuario($rut_usu, $nombre_usu, $apel_pat, $apel_mat, $pass) {
         $this->rut_usu=$rut_usu;
@@ -102,5 +102,13 @@ class Usuario {
 	    $matrix=$objConex->ejecutarTransaccion($sql);
 	    return $matrix;
 	}
+    
+    public function login() {
+        $objConex= new Conexion();
+        $objConex->abrirConexion();
+        $sql="SELECT * FROM USUARIO WHERE NOMBRE_USU='".$this->nombre_usu."' AND PASS='".$this->pass."';";
+        $vector=$objConex->ejecutarTransaccion($sql);
+        return $vector;
+    }
 }
 ?>

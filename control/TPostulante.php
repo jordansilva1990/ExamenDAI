@@ -37,7 +37,7 @@ if(isset($_POST["OK"]) && $_POST["OK"]=="Insertar")
   $objPostulante= new Postulante();//Instancia
   $objPostulante->Postulante($rut_post, $nombre,$apel_pat, $apel_mat,$fecha_nac,$sexo,$hijo,$telefono, $direccion, $sueldo_liquido, $enfermedad_cronica, $id_estado, $id_comuna, $id_edu, $id_renta);
   $resul=$objPostulante->insertarPostulante();
-  if($resul!="") header("Location:../Vision/View_Categoria.php");
+  if($resul!="") header("Location:../vision/FormularioPreAprobacion.php");
   else
   //COLOCAR LOCALIZACION
   { echo "<script language='javascript'>alert('ERROR: DATA COULD NOT BE SAVED');window.location='../vision/'</script>";

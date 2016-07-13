@@ -78,5 +78,10 @@
         <script src="../bootstrap/js/plugins/morris/raphael.min.js"></script>
         <script src="../bootstrap/js/plugins/morris/morris.min.js"></script>
         <script src="../bootstrap/js/plugins/morris/morris-data.js"></script>
+        <div class="jumbotron">
+            <h1>Sistema de Gestión de DAICredit</h1>
+            </br>
+            <h3></h3>
+        </div>
     </body>
 </html>
