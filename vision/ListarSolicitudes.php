@@ -2,8 +2,8 @@
 <html>
     <?php
         
-		include("../Datos/Conexion.php");
-		include("../Vision/Inicio.php");
+		include("../datos/Conexion.php");
+		include("../vision/Inicio.php");
         
     ?>
 	<body>
