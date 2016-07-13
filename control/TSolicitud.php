@@ -1,11 +1,12 @@
 <?php
 require_once("../negocio/Solicitud.php");
-if(isset($_POST["id_solicitud"]) && $_POST["id_solicitud"]!="")
+/*if(isset($_POST["id_solicitud"]) && $_POST["id_solicitud"]!="")
 { $id_solicitud=$_POST["id_solicitud"];}
 if(isset($_POST["estado"]) && $_POST["estado"]!="")
 { $estado=$_POST["estado"];}
 if(isset($_POST["fecha"]) && $_POST["fecha"]!="")
-{ $fecha=$_POST["fecha"];}
+{ $fecha=$_POST["fecha"];}*/
+
 if(isset($_POST["rut_post"]) && $_POST["rut_post"]!="")
 { $rut_post=$_POST["rut_post"];}
 if($_SESSION["info-usuario"]= null ){
@@ -51,6 +52,24 @@ if(isset($_POST["OK"]) && $_POST["OK"]=="Buscar")
   $vector=$objConex->buscarSolicitud($id_solicitud);
   return $vector;
 }
+
+if(isset($_POST["OK"]) && $_POST["OK"]=="Ver")
+{ //Trigger Busqueda
+  $objConex= new Solicitud();//Instancia
+  $objConex->setRut_post($rut_post);//a memoria
+  $vector=$objConex->verEstado($rut_post);
+  //return $vector;
+  if($vector!="") header("Location:../Vision/EstadoSolicitud.php?rut=".$rut_post);
+  else
+  { echo "<script language='javascript'>alert('ERROR: DATA COULD NOT BE SAVED');window.location='../vision/'</script>";
+  }
+}
+
+
+
+
+
+
 if(isset($_POST["OK"]) && $_POST["OK"]=="Listar")
 { //Trigger Listado
   $objConex= new Solicitud($id_solicitud, $estado,$fecha, $rut_post);//Instancia

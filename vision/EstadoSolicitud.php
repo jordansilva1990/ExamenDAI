@@ -12,7 +12,9 @@
 			#include("../datos/Conexion.php");
 			$objConex= new Conexion();
 			$objConex->abrirConexion();
-			$sql="SELECT postulante.rut_post, postulante.nombre, solicitud.estado FROM postulante, solicitud where solicitud.rut_post=postulante.rut_post;";
+			$rut=htmlspecialchars($_GET["rut"]);
+			
+			$sql="select pos.rut_post , pos.nombre, sol.estado, sol.id_solicitud from postulante pos join solicitud sol 					using(rut_post) order by sol.fecha where rut_post='".$rut."';";
 			$cata=mysql_query($sql) or die ("Problema en conexion...Verifique");
 			echo "<html>";
 			echo "<form action='../Control/TSolicitud.php' method='post'>";

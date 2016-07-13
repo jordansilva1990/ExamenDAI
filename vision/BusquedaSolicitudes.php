@@ -20,8 +20,8 @@
                         <tbody>
                             <tr>
                                 <td>Rut</td>
-                                <td><input type=text class="form-control" name=rut_pos></td>     
-                                <td><input type=submit  class="btn btn-default" name=OK value='Buscar'></td>                         
+                                <td><input type=text class="form-control" name=rut_post></td>     
+                                <td><input type=submit  class="btn btn-default" name=OK value='Ver'></td>                         
                             </tr>                            
                         </tbody>
                     </table>
