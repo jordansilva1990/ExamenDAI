@@ -14,18 +14,18 @@
   <title>Banco</title>
 </head>
 <body>
-  <form action='../Control/TPostulante.php' method='post'> 
+  <form action='../Control/TPostulante.php' method='post'>
                 <div class="jumbotron">
                     <h1>Ingreso de Solicitudes</h1>
-                </div> 
+                </div>
                 <div class="col-lg-6">
                 <div class="table-responsive">
-                    <table class="table table-hover table-striped">                        
+                    <table class="table table-hover table-striped">
                         <tbody>
                             <tr>
                                 <td>Rut</td>
                                 <td><input type=text class="form-control" name=rut_post></td></td>
-                                <td>Telefono</td>                             
+                                <td>Telefono</td>
                                 <td><input type=text class="form-control" name=telefono></td></td>
                             </tr>
                             <tr>
@@ -45,7 +45,7 @@
                             </tr>
                             <tr>
                                 <td>Fecha Nacimiento</td>
-                                <td><input type=text class="form-control" name=fecha_nac></td></td>                                
+                                <td><input type=date class="form-control" name=fecha_nac></td></td>                                
                                 <td>Educacion</td>
                                 <td>
                                 <select name=id_edu id="Educacion" value="0">
@@ -60,7 +60,7 @@
                             </tr>
                             <tr>
                                 <td>Sexo</td>
-                                <td><input type=text class="form-control" name=sexo></td></td>                               
+                                <td><input type=text class="form-control" name=sexo></td></td>
                                 <td>Renta</td>
                                 <td>
                                 <select name="id_renta" id="Renta" value="0">
@@ -83,7 +83,7 @@
                                 <option value=3>Viudo</option>
                                 <option value=4>Separado</option>
                                 </select>
-                                </td>                                
+                                </td>
                                 <td>Sueldo Liquido</td>
                                 <td><input type=text class="form-control" name=sueldo_liquido></td></td>
                             </tr>
@@ -97,16 +97,16 @@
                                 <td><input type=submit  class="btn btn-default" name=OK value='Insertar'></td>
                                  <td></td>
                                   <td></td>
-                                
+
                             </tr>
-                            
+
                         </tbody>
                     </table>
                 </div>
             </div>
-                
-                
-                
+
+
+
                 </form>
 
 </body>
