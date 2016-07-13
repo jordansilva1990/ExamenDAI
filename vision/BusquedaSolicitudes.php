@@ -5,9 +5,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Ingreso de Categorias
+                    Busqueda de Solicitudes
                 </h1>                
-               <form action='../Control/GUIBusqueda.php' method='post'> 
+               <form action='../control/TSolicitud.php' method='post'> 
                 <div class="col-lg-6">
                 <h3>Busqueda de Solicitudes por Rut:</h3>
                 <div class="table-responsive">
@@ -15,25 +15,24 @@
                         <tbody>
                             <tr>
                                 <td>Rut</td>
-                                <td><input type=text class="form-control" name=rut_pos></td>                              
+                                <td><input type=text class="form-control" name=rut_pos></td>     
+                                <td><input type=submit  class="btn btn-default" name=OK value='Buscar'></td>                         
                             </tr>                            
-                            <tr>
-                                <td></td>
-                                <td><input type=submit  class="btn btn-default" name=OK value='Buscar'></td>
-                                 <td></td>
-                                  <td></td>
-                                
-                            </tr>
-                            <tr>
-                            </tr>
-                            
                         </tbody>
                     </table>
                 </div>
+                </br>
+                <h3>Busqueda de Solicitudes por Fecha</h3>
+                <table class="table table-hover table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Fecha</td>
+                            <td><input type=text class="form-control" size=1 name=dia>/<input type=text class="form-control" size=1 name=mes>/<input type=text class="form-control" size=5 name=year></td>
+                            <td><input type=submit class="btn btn-default" name=OK value='Buscar'></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-                
-                
-                
                 </form>
                 
             </div>
@@ -41,73 +40,28 @@
     </body>
 </html>
 <?php
-  include("../Datos/Conexion.php");
-  $objConex= new Conexion();
-  $objConex->abrirConexion();
-  $sql="SELECT * FROM postulante";
-  $pac=mysql_query($sql) or die ("Problema en conexion  a Tabla Paciente");
-  echo "<html><center>";
-  echo "<form action='../Control/GUIBusqueda.php' method='post'>";
-  echo " <table class='table table-hover table-striped'> ";
-  while($matrix=mysql_fetch_row($pac))
-  { echo "
-			<tbody>
-                       <tr>
-                        	<td>Rut</td>                            
-							<td>".$matrix[0]."</td>
-							<td>Telefono</td>                            
-							<td>".$matrix[7]."</td>                              
-                       </tr>
-					   <tr>
-                        	<td>Nombre</td>                            
-							<td>".$matrix[1]."</td>
-							<td>Direccion</td>                            
-							<td>".$matrix[8]."</td>                              
-                       </tr> 
-					   <tr>
-                        	<td>Apellido Paterno</td>                            
-							<td>".$matrix[2]."</td>
-							<td>Sueldo Liquido</td>                            
-							<td>".$matrix[9]."</td>                              
-                       </tr> 
-					   <tr>
-                        	<td>Apellido Materno</td>                            
-							<td>".$matrix[3]."</td>
-							<td>Enfermedad Cronica</td>                            
-							<td>".$matrix[10]."</td>                              
-                       </tr>
-					   <tr>
-                        	<td>Fecha Nacimiento</td>                            
-							<td>".$matrix[4]."</td>
-							<td>Estado Civil</td>                            
-							<td>".$matrix[11]."</td>                              
-                       </tr> 
-					   <tr>
-                        	<td>Sexo</td>                            
-							<td>".$matrix[5]."</td>
-							<td>Comuna</td>                            
-							<td>".$matrix[12]."</td>                              
-                       </tr> 
-					   <tr>
-                        	<td>Hijos</td>                            
-							<td>".$matrix[6]."</td>
-							<td>Educacion</td>                            
-							<td>".$matrix[13]."</td>                              
-                       </tr>                              
-                       <tr>
-                            <td></td>
-                            <td><input type=submit  class="btn btn-default" name=OK value='Volver'></td>
-                            <td></td>
-                            <td></td>
-                                
-                      </tr>
-			</tbody>"
-	
-	
-	echo "</tr>";
-  }
+include("../datos/Conexion.php");
+$objConex= new Conexion();
+$objConex->abrirConexion();
+$sql="SELECT postulante.rut_post, postulante.nombre, solicitud.estado FROM postulante, solicitud where solicitud.rut_post=postulante.rut_post;";
+$cata=mysql_query($sql) or die ("Problema en conexion...Verifique");
+echo "<html>";
+echo "<form action='../Control/TSolicitud.php' method='post'>";
+echo "<table class='gridtable table-bordered' type='text/css' href='../Vision/maqueta.css'>";
+echo "<tr>";
+echo "<th>RUT</th><th>NOMBRE</th><th>ESTADO</th><th>ACCION</th></tr>";
+//Llenado de tabla con datos de clientes
+while($matrix=mysql_fetch_row($cata))
+{ echo "<tr>";
+  echo "<td bgcolor=#6699FF>".$matrix[0]."</td>";
+  echo "<td bgcolor=#6699FF>".$matrix[1]."</td>";
+  echo "<td bgcolor=#6699FF>".$matrix[2]."</td>";
+  //Botones de Accion
+  echo "<td><input type=submit name=OK value='Ver'><input type=submit name=OK1 value='Modificar'><input type=submit name=OK2 value='Eliminar'></td>";
+  echo "</tr>";
+  echo "<tr>";
+};
 
 echo "</table>";
-echo "</form></center></html>";
-
+echo "</form></html>";
 ?>
