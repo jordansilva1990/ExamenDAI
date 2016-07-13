@@ -14,21 +14,17 @@
 			$objConex->abrirConexion();
 			$rut=htmlspecialchars($_GET["rut"]);
 			
-			$sql="select pos.rut_post , pos.nombre, sol.estado, sol.id_solicitud from postulante pos join solicitud sol 					using(rut_post) order by sol.fecha where rut_post='".$rut."';";
+			$sql="select estado from solicitud  where rut_post='".$rut."';";
 			$cata=mysql_query($sql) or die ("Problema en conexion...Verifique");
 			echo "<html>";
 			echo "<form action='../Control/TSolicitud.php' method='post'>";
 			echo "<table class='table table-hover table-striped' type='text/css' href='../Vision/maqueta.css'>";
 			echo "<tr>";
-			echo "<th>RUT</th><th>NOMBRE</th><th>ESTADO</th><th>ACCION</th></tr>";
+			echo "<th>Postulaciones</th></tr>";
 			//Llenado de tabla con datos de clientes
 			while($matrix=mysql_fetch_row($cata))
 			{ echo "<tr>";
-  				echo "<td>".$matrix[0]."</td>";
-  				echo "<td>".$matrix[1]."</td>";
-  				echo "<td>".$matrix[2]."</td>";
-  				//Botones de Accion
-  				echo "<td><input class='btn btn-default' type=submit name=OK value='Ver'><input class='btn btn-default' type=submit name=OK1 value='Modificar'><input class='btn btn-default' type=submit name=OK2 value='Eliminar'></td>";
+  				echo "<td>Estado de Solicitud".$matrix[0]."</td>";
   				echo "</tr>";
   				echo "<tr>";
 			};
