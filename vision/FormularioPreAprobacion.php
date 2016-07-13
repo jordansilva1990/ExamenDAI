@@ -3,6 +3,7 @@
 <head>
   <?php
   include('../datos/Conexion.php');
+  include("../Vision/Inicio.php");
   ?>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +24,7 @@
                                 <td>Rut</td>
                                 <td><input type=text class="form-control" name=rut_pos></td></td>
                                 <td>Telefono</td>                             
-                                <td><input type=text class="form-control" name=fono></td></td>
+                                <td><input type=text class="form-control" name=telefono></td></td>
                             </tr>
                             <tr>
                                 <td>Nombre</td>
@@ -38,14 +39,14 @@
                             <tr>
                                 <td>Apellido Materno</td>
                                 <td><input type=text class="form-control" name=apel_mat></td></td>                                <td>Comuna</td>
-                                <td><input type=text class="form-control" name=comuna></td></td>
+                                <td><input type=text class="form-control" name=id_comuna></td></td>
                             </tr>
                             <tr>
                                 <td>Fecha Nacimiento</td>
-                                <td><input type=text class="form-control" name=fecha></td></td>                                
+                                <td><input type=text class="form-control" name=fecha_nac></td></td>                                
                                 <td>Educacion</td>
                                 <td>
-                                <select name="Educacion" id="Educacion" value="0">
+                                <select name="id_Edu" id="Educacion" value="0">
                                 <option value=0>Seleccione</option>
                                 <option value=1>Profesional</option>
                                 <option value=2>Técnico</option>
@@ -60,7 +61,7 @@
                                 <td><input type=text class="form-control" name=sexo></td></td>                               
                                 <td>Renta</td>
                                 <td>
-                                <select name="Renta" id="Renta" value="0">
+                                <select name="id_renta" id="Renta" value="0">
                                 <option value="0">Seleccione</option>
                                 <option value="1">Fijo</option>
                                 <option value="2">Variable</option>
@@ -73,7 +74,7 @@
                             <tr>
                                 <td>Estado Civil</td>
                                 <td>
-                                <select name="Estado_Civil" id="Estado_Civil" value="0">
+                                <select name="id_estado" id="Estado_Civil" value="0">
                                 <option value=0>Seleccione</option>
                                 <option value=1>Soltero</option>
                                 <option value=2>Casado</option>
@@ -87,11 +88,11 @@
                             <tr>
                                 <td>Hijos</td>
                                 <td><input type=text class="form-control" name=hijos></td></td>                                <td>Enfermedad</td>
-                                <td><input type=text class="form-control" name=enfermedad></td></td>
+                                <td><input type=text class="form-control" name=enfermedad_cronica></td></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><input type=submit  class="btn btn-default" name=OK value='Postular'></td>
+                                <td><input type=submit  class="btn btn-default" name=OK value='Insertar'></td>
                                  <td></td>
                                   <td></td>
                                 
