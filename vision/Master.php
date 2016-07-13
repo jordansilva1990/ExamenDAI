@@ -61,7 +61,6 @@
                         <li class="home-page current"><a href="Inicio.php"><span></span></a></li>
                         <li><a href="FormularioPreAprobacion.php">Solicitud</a></li>
                         <li><a href="BusquedaSolicitudes.php">Busqueda Solicitudes</a></li>
-                        <li><a href="EstadoSolicitud.php">Estado Solicitud</a></li>
                         <li><a href="ListarSolicitudes.php">Listar Solicitudes</a></li>
                         <li><a href="Registro.php">Registro</a></li>
                         <li><a href="../index.php" class="btn btn-Danger btn-primary btn-cons">Salir</a></li>

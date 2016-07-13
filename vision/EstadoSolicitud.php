@@ -12,8 +12,8 @@
 			#include("../datos/Conexion.php");
 			$objConex= new Conexion();
 			$objConex->abrirConexion();
-			$rut=htmlspecialchars($_GET["rut"]);
-			
+			#$rut=htmlspecialchars($_GET["rut"]);
+			$rut= $_GET["rut"];
 			$sql="select estado from solicitud  where rut_post='".$rut."';";
 			$cata=mysql_query($sql) or die ("Problema en conexion...Verifique");
 			echo "<html>";
@@ -24,7 +24,7 @@
 			//Llenado de tabla con datos de clientes
 			if($matrix=mysql_fetch_row($cata))
 			{ echo "<tr>";
-  				echo "<td>Estado de Solicitud".$matrix[0]."</td>";
+  				echo "<td><h1>Estado de Solicitud: ".$matrix[0]."</h1></td>";
   				echo "</tr>";
   				echo "<tr>";
 			};
