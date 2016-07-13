@@ -2,7 +2,7 @@
 <html>
     <?php
 		include("../Datos/Conexion.php");
-		include("../Vision/Inicio.php");
+		include('Master.php');
     ?>
 	<body>
 		

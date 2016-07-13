@@ -1,15 +1,17 @@
-<?php
-    include("../vision/Inicio.php");
-?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <?php 
+    include('Master.php');
+    ?>
 	<body>
 		<!-- Page Heading -->
         <div class="row">
+            <html><center>
             <div class="col-lg-12">
-                <h1 class="page-header">
-                    Busqueda de Solicitudes
-                </h1>                
+                <div class="jumbotron">
+                    <h1>Busqueda de Solicitudes</h1>
+                </div>               
                <form action='../control/TSolicitud.php' method='post'> 
                 <div class="col-lg-6">
                 <h3>Busqueda de Solicitudes por Rut:</h3>

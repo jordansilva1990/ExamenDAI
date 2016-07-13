@@ -3,7 +3,7 @@
     <?php
         
 		include("../datos/Conexion.php");
-		include("../vision/Inicio.php");
+		include('Master.php');
         
     ?>
 	<body>
