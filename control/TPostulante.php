@@ -1,5 +1,6 @@
 <?php
 require_once("../negocio/Postulante.php");
+require_once("../negocio/Solicitud.php");
 if(isset($_POST["rut_post"]) && $_POST["rut_post"]!="")
 { $rut_post=$_POST["rut_post"];}
 if(isset($_POST["nombre"]) && $_POST["nombre"]!="")
@@ -38,7 +39,13 @@ if(isset($_POST["OK"]) && $_POST["OK"]=="Insertar")
 { //Trigger insercion
   $objPostulante= new Postulante();//Instancia
   $objPostulante->Postulante($rut_post, $nombre,$apel_pat, $apel_mat,$fecha_nac,$sexo,$hijo,$telefono, $direccion, $sueldo_liquido, $enfermedad_cronica, $id_estado, $id_comuna, $id_edu, $id_renta);
+  $objSolicitud= new Solicitud();
+  $objSolicitud->setId_solicitud(date("his"));
+  $objSolicitud->setEstado("pendiente");
+  $objSolicitud->setFecha(date("d-m-y"));
+  $objSolicitud->setRut_post($rut_post);
   $resul=$objPostulante->insertarPostulante();
+  $objSolicitud->insertarSolicitud();
   if($resul!="") header("Location:../vision/FormularioPreAprobacion.php");
   else
   //COLOCAR LOCALIZACION

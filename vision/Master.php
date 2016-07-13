@@ -37,7 +37,7 @@
   <div class="main">
   <!--==============================header=================================-->
     <header>
-        <h1><a href="Inicio.php"><img src="../bootstrap/images/logo.png" alt=""></a></h1>
+        <h1><a href="Inicio.php"><h2>DAICredit</h2></a></h1>
         <div class="form-search">
             <form id="form-search" method="post">
               <input type="text" value="Type here..." onBlur="if(this.value=='') this.value='Type here...'" onFocus="if(this.value =='Type here...' ) this.value=''"  />

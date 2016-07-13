@@ -7,7 +7,7 @@ class Solicitud {
     private $fecha;
     private $rut_post;
 
-    public function __contruct() {}
+    public function __construct() {}
 
     public function Solicitud($id_solicitud, $estado, $fecha, $rut_post) {
         $this->id_solicitud=$id_solicitud;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <?php
-		include("../Datos/Conexion.php");
+		include("../datos/Conexion.php");
 		include('Master.php');
     ?>
 	<body>
