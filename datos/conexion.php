@@ -3,7 +3,7 @@ class Conexion
 {  private $usuario="root";
    private $clave="";
    private $host="127.0.0.1";
-   private $bdatos="bdcredito";
+   private $bdatos="bdcreditos";
    private $conex="";
    
    public function __construct(){}

@@ -39,11 +39,20 @@
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
                         <li class="active">
-                            <a href="Ejemplo.php"><i class="fa fa-fw fa-dashboard" aria-hidden="true"></i>&nbsp;Ejemplo</a>
+                            <a href="Inicio.php"><i class="fa fa-fw fa-dashboard" aria-hidden="true"></i>&nbsp;Inicio</a>
                         </li>
-                        <li>
-                            <a href="../index.php" class="btn btn-danger btn-primary btn-cons">Desconectar</a>
-                        </li> 
+                        <li class="active">
+                            <a href="FormularioPreAprobacion.php"><i class="fa fa-fw fa-dashboard" aria-hidden="true"></i>&nbsp;Solicitud</a>
+                        </li>
+                        <li class="active">
+                            <a href="BusquedaSolicitudes.php"><i class="fa fa-fw fa-dashboard" aria-hidden="true"></i>&nbsp;Busqueda Solicitudes</a>
+                        </li>
+                        <li class="active">
+                            <a href="EstadoSolicitud.php"><i class="fa fa-fw fa-dashboard" aria-hidden="true"></i>&nbsp;Estado Solicitudes</a>
+                        </li>
+                        <li class="active">
+                            <a href="ListarSolicitudes.php"><i class="fa fa-fw fa-dashboard" aria-hidden="true"></i>&nbsp;Listar Solicitudes</a>
+                        </li>
                     </ul>
                 </div>               
             </nav>
