@@ -11,9 +11,9 @@ if(isset($_POST["rut_post"]) && $_POST["rut_post"]!="")
 
 if(isset($_POST["OK"]) && $_POST["OK"]=="Insertar")
 { //Trigger insercion
-  $objRenta= new Solicitud($id_solicitud, $estado,$fecha, $rut_post);//Instancia
-  $objRenta->Solicitud($id_solicitud, $estado,$fecha, $rut_post);
-  $resul=$objRenta->insertarSolicitud();
+  $objConex= new Solicitud($id_solicitud, $estado,$fecha, $rut_post);//Instancia
+  $objConex->Solicitud($id_solicitud, $estado,$fecha, $rut_post);
+  $resul=$objConex->insertarSolicitud();
   if($resul!="") header("Location:../Vision/ListarSolicitudes.php");
   else
   //COLOCAR LOCALIZACION
@@ -23,9 +23,9 @@ if(isset($_POST["OK"]) && $_POST["OK"]=="Insertar")
 }
 if(isset($_POST["OK1"]) && $_POST["OK1"]=="Modificar")
 { //Trigger Modificacion
-  $objRenta= new Solicitud($id_solicitud, $estado,$fecha, $rut_post);//Instancia
-  $objRenta->Solicitud($id_solicitud, $estado,$fecha, $rut_post);
-  $resul=$objRenta->modificarSolicitud();
+  $objConex= new Solicitud($id_solicitud, $estado,$fecha, $rut_post);//Instancia
+  $objConex->Solicitud($id_solicitud, $estado,$fecha, $rut_post);
+  $resul=$objConex->modificarSolicitud();
    if($resul!="") header("Location:../Vision/ListarSolicitudes.php");
   else
   { echo "<script language='javascript'>alert('ERROR: DATA COULD NOT BE SAVED');window.location='../vision/'</script>";
@@ -33,9 +33,9 @@ if(isset($_POST["OK1"]) && $_POST["OK1"]=="Modificar")
 }
 if(isset($_POST["OK2"]) && $_POST["OK2"]=="Eliminar")
 { //Trigger Eliminacion
-  $objRenta= new Solicitud($id_solicitud, $estado,$fecha, $rut_post);//Instancia
-  $objRenta->setId_solicitud($id_solicitud);//a memoria
-  $resul=$objRenta->eliminarSolicitud($id_solicitud);
+  $objConex= new Solicitud($id_solicitud, $estado,$fecha, $rut_post);//Instancia
+  $objConex->setId_solicitud($id_solicitud);//a memoria
+  $resul=$objConex->eliminarSolicitud($id_solicitud);
    if($resul!="") header("Location:../Vision/ListarSolicitudes.php");
   else
   { echo "<script language='javascript'>alert('ERROR: DATA COULD NOT BE SAVED');window.location='../vision/'</script>";
@@ -43,16 +43,23 @@ if(isset($_POST["OK2"]) && $_POST["OK2"]=="Eliminar")
 }
 if(isset($_POST["OK"]) && $_POST["OK"]=="Buscar")
 { //Trigger Busqueda
-  $objRenta= new Solicitud($id_solicitud, $estado,$fecha, $rut_post);//Instancia
-  $objRenta->setId_solicitud($id_solicitud);//a memoria
-  $vector=$objRenta->buscarSolicitud($id_solicitud);
+  $objConex= new Solicitud($id_solicitud, $estado,$fecha, $rut_post);//Instancia
+  $objConex->setId_solicitud($id_solicitud);//a memoria
+  $vector=$objConex->buscarSolicitud($id_solicitud);
   return $vector;
 }
 if(isset($_POST["OK"]) && $_POST["OK"]=="Listar")
 { //Trigger Listado
-  $objRenta= new Solicitud($id_solicitud, $estado,$fecha, $rut_post);//Instancia
-  $matrix=$objRenta->listarSolicitud();
+  $objConex= new Solicitud($id_solicitud, $estado,$fecha, $rut_post);//Instancia
+  $matrix=$objConex->listarSolicitud();
   return $matrix;
+}
+
+if(isset($_POST["OK"]) && $_POST["OK"]=="Ver")
+{ //Trigger Listado
+  $objConex= new Solicitud($id_solicitud, $estado,$fecha, $rut_post);//Instancia
+  $resulEstado=$objConex->verEstado();
+  return $resulEstado;
 }
 
 ?>

@@ -92,5 +92,13 @@ class Solicitud {
 	    $matrix=$objConex->ejecutarTransaccion($sql);
 	    return $matrix;
 	}
+    
+    public function verEstado($rutEstado) {
+        $objConex= new Conexion();
+	    $objConex->abrirConexion();
+	    $sql="SELECT ESTADO FROM SOLICITUD WHERE RUT_POST='".$rutEstado."';";
+	    $resul=$objConex->ejecutarTransaccion($sql);
+	    return $resul;
+    }
 }
 ?>
