@@ -27,7 +27,8 @@
                     <tbody>
                         <tr>
                             <td>Fecha</td>
-                            <td><input type=text class="form-control" size=1 name=dia>/<input type=text class="form-control" size=1 name=mes>/<input type=text class="form-control" size=5 name=year></td>
+                            <td>Desde: <input type=text class="form-control" size=1 name=dia>/<input type=text class="form-control" size=1 name=mes>/<input type=text class="form-control" size=5 name=year></td>
+                            <td>Hasta: <input type=text class="form-control" size=1 name=dia>/<input type=text class="form-control" size=1 name=mes>/<input type=text class="form-control" size=5 name=year></td>
                             <td><input type=submit class="btn btn-default" name=OK value='Buscar'></td>
                         </tr>
                     </tbody>
