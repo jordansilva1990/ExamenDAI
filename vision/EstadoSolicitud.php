@@ -22,7 +22,7 @@
 			echo "<tr>";
 			echo "<th>Postulaciones</th></tr>";
 			//Llenado de tabla con datos de clientes
-			while($matrix=mysql_fetch_row($cata))
+			if($matrix=mysql_fetch_row($cata))
 			{ echo "<tr>";
   				echo "<td>Estado de Solicitud".$matrix[0]."</td>";
   				echo "</tr>";
