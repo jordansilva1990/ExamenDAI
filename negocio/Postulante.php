@@ -1,24 +1,24 @@
 <?php
 require_once("../datos/conexion.php");
 
-class Postulante {}
-    private rut_post;
-    private nombre;
-    private apel_pat;
-    private apel_mat;
-    private fecha_nac;
-    private sexo;
-    private hijo;
-    private telefono;
-    private direccion;
-    private sueldo_liquido;
-    private enfermedad_cronica;
-    private id_estado;
-    private id_comuna;
-    private id_edu;
-    private id_renta;
+class Postulante {
+    private $rut_post;
+    private $nombre;
+    private $apel_pat;
+    private $apel_mat;
+    private $fecha_nac;
+    private $sexo;
+    private $hijo;
+    private $telefono;
+    private $direccion;
+    private $sueldo_liquido;
+    private $enfermedad_cronica;
+    private $id_estado;
+    private $id_comuna;
+    private $id_edu;
+    private $id_renta;
     
-    public function __contruct(){}
+    public function __construct(){}
     
     public function Postulante($rut_post, $nombre, $apel_pat, $apel_mat, $fecha_nac, $sexo, $hijo, $telefono, $direccion, $sueldo_liquido, $enfermedad_cronica, $id_estado, $id_comuna, $id_edu, $id_renta){
         $this->rut_post=$rut_post;
@@ -172,7 +172,7 @@ class Postulante {}
     public function modificarPostulante(){
         $objConex= new Conexion();
         $objConex->abrirConexion();
-        $sql="UPDATE POSTULANTE SET RUT_POST='".$this->rut_post."', NOMBRE='".$this->nombre."', APEL_PAT='".$this->apel_pat."', APEL_MAT='".$this->apel_mat."', FECHA_NAC='".$this->fecha_nac."', SEXO='".$this->sexo."', HIJO=".$this->hijo.", TELEFONO='".$this->telefono."', DIRECCION='".$this->direccion."', SUELDO_LIQUIDO=".$this->sueldo_liquido.", ENFERMEDAD_CRONICA='".$this->enfermedad_cronica."', ID_ESTADO=".this->id_estado.", ID_COMUNA=".$this->id_comuna.", ID_EDU=".$this->id_edu.", ID_RENTA=".$this->id_renta." WHERE(RUT_POST='".$this->rut_post."')";
+        $sql="UPDATE POSTULANTE SET RUT_POST='".$this->rut_post."', NOMBRE='".$this->nombre."', APEL_PAT='".$this->apel_pat."', APEL_MAT='".$this->apel_mat."', FECHA_NAC='".$this->fecha_nac."', SEXO='".$this->sexo."', HIJO=".$this->hijo.", TELEFONO='".$this->telefono."', DIRECCION='".$this->direccion."', SUELDO_LIQUIDO=".$this->sueldo_liquido.", ENFERMEDAD_CRONICA='".$this->enfermedad_cronica."', ID_ESTADO=".$this->id_estado.", ID_COMUNA=".$this->id_comuna.", ID_EDU=".$this->id_edu.", ID_RENTA=".$this->id_renta." WHERE(RUT_POST='".$this->rut_post."')";
         $resul=$objConex->ejecutarTransaccion($sql);
         return $resul;
     }
@@ -180,7 +180,7 @@ class Postulante {}
     public function eliminarPostulante(){
         $objConex= new Conexion();
         $objConex->abrirConexion();
-        $sql="DELETE FROM POSTULANTE WHERE(RUT_POST='".$this->rut_post."')"
+        $sql="DELETE FROM POSTULANTE WHERE(RUT_POST='".$this->rut_post."')";
         $resul=$objConex->ejecutarTransaccion($sql);
         return $resul;
     }
@@ -201,4 +201,6 @@ class Postulante {}
 	    $matrix=$objConex->ejecutarTransaccion($sql);	
 	    return $matrix;
 	}
+}
+    
 ?>

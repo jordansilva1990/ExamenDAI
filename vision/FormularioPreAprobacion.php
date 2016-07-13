@@ -22,7 +22,7 @@
                         <tbody>
                             <tr>
                                 <td>Rut</td>
-                                <td><input type=text class="form-control" name=rut_pos></td></td>
+                                <td><input type=text class="form-control" name=rut_post></td></td>
                                 <td>Telefono</td>                             
                                 <td><input type=text class="form-control" name=telefono></td></td>
                             </tr>
@@ -46,7 +46,7 @@
                                 <td><input type=text class="form-control" name=fecha_nac></td></td>                                
                                 <td>Educacion</td>
                                 <td>
-                                <select name="id_Edu" id="Educacion" value="0">
+                                <select name=id_edu id="Educacion" value="0">
                                 <option value=0>Seleccione</option>
                                 <option value=1>Profesional</option>
                                 <option value=2>Técnico</option>
@@ -74,7 +74,7 @@
                             <tr>
                                 <td>Estado Civil</td>
                                 <td>
-                                <select name="id_estado" id="Estado_Civil" value="0">
+                                <select name=id_estado id="Estado_Civil" value="0">
                                 <option value=0>Seleccione</option>
                                 <option value=1>Soltero</option>
                                 <option value=2>Casado</option>
@@ -83,11 +83,11 @@
                                 </select>
                                 </td>                                
                                 <td>Sueldo Liquido</td>
-                                <td><input type=text class="form-control" name=sueldo></td></td>
+                                <td><input type=text class="form-control" name=sueldo_liquido></td></td>
                             </tr>
                             <tr>
                                 <td>Hijos</td>
-                                <td><input type=text class="form-control" name=hijos></td></td>                                <td>Enfermedad</td>
+                                <td><input type=text class="form-control" name=hijo></td></td>                                <td>Enfermedad</td>
                                 <td><input type=text class="form-control" name=enfermedad_cronica></td></td>
                             </tr>
                             <tr>

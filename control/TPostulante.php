@@ -1,5 +1,5 @@
 <?php
-require_once("../negocio/Usuario.php");
+require_once("../negocio/Postulante.php");
 if(isset($_POST["rut_post"]) && $_POST["rut_post"]!="")
 { $rut_post=$_POST["rut_post"];}
 if(isset($_POST["nombre"]) && $_POST["nombre"]!="")
@@ -28,14 +28,14 @@ if(isset($_POST["id_comuna"]) && $_POST["id_comuna"]!="")
 { $id_comuna=$_POST["id_comuna"];}
 if(isset($_POST["id_edu"]) && $_POST["id_edu"]!="")
 { $id_edu=$_POST["id_edu"];}
-f(isset($_POST["id_renta"]) && $_POST["id_renta"]!="")
+if(isset($_POST["id_renta"]) && $_POST["id_renta"]!="")
 { $id_renta=$_POST["id_renta"];}
 
 
 if(isset($_POST["OK"]) && $_POST["OK"]=="Insertar")
 { //Trigger insercion
-  $objPostulante= new Postulante($rut_post, $nombre,$apel_pat, $apel_mat,$fecha_nac,$sexo,$hijo,$telefono, $direccion, $sueldo_liquido, $id_estado, $id_comuna, $id_edu, $id_renta);//Instancia
-  $objPostulante->Postulante($rut_post, $nombre,$apel_pat, $apel_mat,$fecha_nac,$sexo,$hijo,$telefono, $direccion, $sueldo_liquido, $id_estado, $id_comuna, $id_edu, $id_renta);
+  $objPostulante= new Postulante();//Instancia
+  $objPostulante->Postulante($rut_post, $nombre,$apel_pat, $apel_mat,$fecha_nac,$sexo,$hijo,$telefono, $direccion, $sueldo_liquido, $enfermedad_cronica, $id_estado, $id_comuna, $id_edu, $id_renta);
   $resul=$objPostulante->insertarPostulante();
   if($resul!="") header("Location:../Vision/View_Categoria.php");
   else
@@ -46,7 +46,7 @@ if(isset($_POST["OK"]) && $_POST["OK"]=="Insertar")
 }
 if(isset($_POST["OK1"]) && $_POST["OK1"]=="Modificar")
 { //Trigger Modificacion
-  $objPostulante= new Postulante($rut_post, $nombre,$apel_pat, $apel_mat,$fecha_nac,$sexo,$hijo,$telefono, $direccion, $sueldo_liquido, $id_estado, $id_comuna, $id_edu, $id_renta);//Instancia
+  $objPostulante= new Postulante();//Instancia
   $objPostulante->Postulante($rut_post, $nombre,$apel_pat, $apel_mat,$fecha_nac,$sexo,$hijo,$telefono, $direccion, $sueldo_liquido, $id_estado, $id_comuna, $id_edu, $id_renta);
   $resul=$objPostulante->modificarPostulante();
    if($resul!="") header("Location:../Vision/View_Categoria.php");
@@ -66,14 +66,14 @@ if(isset($_POST["OK2"]) && $_POST["OK2"]=="Eliminar")
 }
 if(isset($_POST["OK"]) && $_POST["OK"]=="Buscar")
 { //Trigger Busqueda
-  $objPostulante= new Postulante($rut_post, $nombre,$apel_pat, $apel_mat,$fecha_nac,$sexo,$hijo,$telefono, $direccion, $sueldo_liquido, $id_estado, $id_comuna, $id_edu, $id_renta);//Instancia
+  $objPostulante= new Postulante();//Instancia
   $objPostulante->setRut_post($rut_post);//a memoria
   $vector=$objPostulante->buscarPostulante($rut_post);
   return $vector;
 }
 if(isset($_POST["OK"]) && $_POST["OK"]=="Listar")
 { //Trigger Listado
-  $objPostulante= new Postulante($rut_post, $nombre,$apel_pat, $apel_mat,$fecha_nac,$sexo,$hijo,$telefono, $direccion, $sueldo_liquido, $id_estado, $id_comuna, $id_edu, $id_renta;//Instancia
+  $objPostulante= new Postulante();//Instancia
   $matrix=$objPostulante->listarPostulante();
   return $matrix;
 }
