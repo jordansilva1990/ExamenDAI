@@ -15,8 +15,10 @@
 </head>
 <body>
   <form action='../Control/TPostulante.php' method='post'> 
+                <div class="jumbotron">
+                    <h1>Ingreso de Solicitudes</h1>
+                </div> 
                 <div class="col-lg-6">
-                <h3>Formulario de Preaprobacíon  :</h3>
                 <div class="table-responsive">
                     <table class="table table-hover table-striped">                        
                         <tbody>

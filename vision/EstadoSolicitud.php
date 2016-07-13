@@ -5,9 +5,9 @@
 		include('Master.php');
     ?>
 	<body>
-		
-		<h1>Acceso Administrador de Solicitudes</h1>
-            
+		<div class="jumbotron">
+            <h1>Acceso Administrador de Solicitudes</h1>
+        </div> 
         <?php
 			#include("../datos/Conexion.php");
 			$objConex= new Conexion();

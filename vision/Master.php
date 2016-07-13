@@ -12,6 +12,15 @@
     <script src="../bootstrap/js/jquery-1.7.min.js"></script>
     <script src="../bootstrap/js/jquery.easing.1.3.js"></script>
     <script src="../bootstrap/js/tms-0.4.x.js"></script>
+    <!-- Bootstrap Core CSS -->
+  <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../bootstrap/css/sb-admin.css" rel="stylesheet">
+
+  <!-- Morris Charts CSS -->
+  <link href="../bootstrap/css/plugins/morris.css" rel="stylesheet">
+
     <script>
         $(document).ready(function(){                   
             $('.slider')._TMS({
@@ -63,8 +72,11 @@
     </header> 
     <html><center>
     <div id="page-wrapper">
-        <div class="container-fluid">
+    <html><center>
+        <div class="container">
+        <html><center>
         <div id="subviewPlaceHolder_id">
+        <html><center>
     </div> 
 <!--==============================footer=================================-->
     <footer>

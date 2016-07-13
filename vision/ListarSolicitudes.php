@@ -9,6 +9,9 @@
 	<body>
 		
 		<!--Trabajen Aqui!!--> 
+		<div class="jumbotron">
+           	<h1>Busqueda de Solicitudes</h1>
+        </div> 
             
         <?php
 			echo "<div id='page-wrapper'>";
