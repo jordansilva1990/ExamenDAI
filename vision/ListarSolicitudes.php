@@ -34,7 +34,7 @@
             echo                "<th>Rut</th>";
             echo                "<th>Nombre</th>";
 			echo                "<th>Estado</th>";
-			echo                "<th>      </th>";
+			echo                "<th>Accion</th>";
             echo            "</tr>";
             echo        "</thead>";
             echo        "<tbody>";
@@ -42,7 +42,8 @@
     		{ echo "<tr>";
    			  echo "<td>".$matrix[0]."</td>";
 			  echo "<td>".$matrix[1]."</td>";
-			  echo "<td>".$matrix[2]."</td>";				
+			  echo "<td>".$matrix[2]."</td>";
+			  echo "<td><input type=submit name=OK value=Ver class='btn btn-default' /><input type=submit name=OK value=OK value=Modificar class='btn btn-default' /><input type=submit name=OK value=Eliminar class='btn btn-default' /></td>";				
 			  echo "</tr>";
   			}                       
             echo       "</tbody>";
