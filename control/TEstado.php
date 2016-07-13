@@ -5,6 +5,7 @@ if(isset($_POST["id_estado"]) && $_POST["id_estado"]!="")
 if(isset($_POST["nombre_estado"]) && $_POST["nombre_estado"]!="")
 { $nombre_estado=$_POST["nombre_estado"];}
 
+
 if(isset($_POST["OK"]) && $_POST["OK"]=="Insertar")
 { //Trigger insercion
   $objEstado= new Estado($id_estado, $nombre_estado);//Instancia

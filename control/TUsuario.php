@@ -16,7 +16,7 @@ if(isset($_POST["OK"]) && $_POST["OK"]=="Insertar")
   $objUsuario= new Usuario($rut_usu, $nombre_usu,$apel_pat, $apel_mat,$pass);//Instancia
   $objUsuario->Usuario($rut_usu, $nombre_usu,$apel_pat, $apel_pat,$pass);
   $resul=$objUsuario->insertarUsuario();
-  if($resul!="") header("Location:../Vision/View_Categoria.php");
+  if($resul!="") header("Location:../index.php");
   else
   //COLOCAR LOCALIZACION
   { echo "<script language='javascript'>alert('ERROR: DATA COULD NOT BE SAVED');window.location='../vision/'</script>";

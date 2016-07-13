@@ -30,7 +30,9 @@ if(isset($_POST["id_edu"]) && $_POST["id_edu"]!="")
 { $id_edu=$_POST["id_edu"];}
 if(isset($_POST["id_renta"]) && $_POST["id_renta"]!="")
 { $id_renta=$_POST["id_renta"];}
-
+if($_SESSION["info-usuario"]= null ){
+  header("Location:../index.php");
+}
 
 if(isset($_POST["OK"]) && $_POST["OK"]=="Insertar")
 { //Trigger insercion

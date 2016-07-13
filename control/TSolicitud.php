@@ -8,6 +8,9 @@ if(isset($_POST["fecha"]) && $_POST["fecha"]!="")
 { $fecha=$_POST["fecha"];}
 if(isset($_POST["rut_post"]) && $_POST["rut_post"]!="")
 { $rut_post=$_POST["rut_post"];}
+if($_SESSION["info-usuario"]= null ){
+  header("Location:../index.php");
+}
 
 if(isset($_POST["OK"]) && $_POST["OK"]=="Insertar")
 { //Trigger insercion
